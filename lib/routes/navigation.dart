@@ -8,18 +8,18 @@ import '../screens/TranslatorScreen.dart';
 
 StreamController<int> streamController = StreamController.broadcast();
 
-class Navigator extends StatefulWidget {
-  Navigator(this.index, this.stream);
+class Navigate extends StatefulWidget {
+  Navigate(this.index, this.stream);
   final int index;
   final Stream<int> stream;
 
   @override
-  State<Navigator> createState() => _NavigatorState();
+  State<Navigate> createState() => _NavigateState();
 }
 
-class _NavigatorState extends State<Navigator> {
+class _NavigateState extends State<Navigate> {
 
-  int _current = 1;
+  int _current = 0;
 
   @override
   void initState() {
@@ -54,6 +54,7 @@ class _NavigatorState extends State<Navigator> {
         centerTitle: true,
         backgroundColor: Colors.teal,
       ),
+      body: _screens[_current],
     );
   }
 }

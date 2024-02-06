@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:sign_sync/routes/navigation.dart';
 import 'package:sign_sync/screens/HomeScreen.dart';
 
 Future<void> main() async {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const HomeScreen(),
+      home: Navigate(1, streamController.stream),
       debugShowCheckedModeBanner: false,
     );
   }

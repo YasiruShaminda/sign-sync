@@ -39,8 +39,7 @@ class _TranslatorScreenState extends State<TranslatorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         child: Column(
           children: [
             Container(
@@ -58,7 +57,6 @@ class _TranslatorScreenState extends State<TranslatorScreen> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
