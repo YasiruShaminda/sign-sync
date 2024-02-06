@@ -1,24 +1,43 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:sign_sync/screens/CameraPreviewScreen.dart';
 import 'package:sign_sync/screens/HomeScreen.dart';
 
-void main() {
-  runApp(const MyApp());
+// late List<CameraDescription> cameras;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  runApp(MyApp(cameras: cameras));
 }
 
+// void main(){
+//   runApp(const MyApp());
+// }
+
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // const MyApp({Key? key}) : super(key: key);
+  final List<CameraDescription> cameras;
+  const MyApp({required this.cameras, Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // return MaterialApp(
+    //   title: 'SignSync',
+    //   theme: ThemeData(
+    //     primarySwatch: Colors.teal,
+    //   ),
+    //   home: const HomeScreen(),
+    //   debugShowCheckedModeBanner: false,
+    // );
+
+
     return MaterialApp(
-      title: 'SignSync',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: const HomeScreen(),
-      debugShowCheckedModeBanner: false,
-    );
+        home: MediaQuery(
+          data: MediaQueryData(),
+          child: CameraScreen(cameras: cameras),
+    ));
   }
 }
 
