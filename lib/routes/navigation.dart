@@ -53,6 +53,14 @@ class _NavigateState extends State<Navigate> {
         ),
         centerTitle: true,
         backgroundColor: Colors.teal,
+        actions: [
+          IconButton(
+            onPressed: () {
+              streamController.add(0);
+            },
+            icon: const Icon(Icons.home),
+          ),
+        ],
       ),
       body: _screens[_current],
     );
