@@ -44,7 +44,7 @@ class _NavigateState extends State<Navigate> {
       drawer: Drawer(),
       appBar: AppBar(
         title: const Text(
-          'SIgnSync',
+          'SignSync',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontFamily: 'Salsa',
