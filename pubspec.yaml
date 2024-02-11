@@ -99,9 +99,9 @@ flutter:
     - family: Auslan
       fonts:
         - asset: fonts/AdmanGraphics_Auslan.ttf
-    - family: salsa
-      fonts:
-        - asset: fonts/Salsa-Regular.ttf
+#    - family: salsa
+#      fonts:
+#        - asset: fonts/Salsa-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
